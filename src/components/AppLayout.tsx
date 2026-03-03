@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { LayoutDashboard, ListChecks, BarChart3, CalendarDays, Menu, X, Sun, Moon, Zap } from "lucide-react";
+import { LayoutDashboard, ListChecks, BarChart3, CalendarDays, Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 
 const NAV_ITEMS = [
@@ -30,9 +30,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       >
         {/* Logo */}
         <div className="flex items-center gap-3 px-6 py-5 border-b border-border">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg gradient-primary">
-            <Zap className="h-5 w-5 text-primary-foreground" />
-          </div>
+          <img src="/habit-tracker-logo.svg" alt="Habit Tracker" className="h-9 w-9" />
           <span className="text-lg font-bold tracking-tight">Habit Tracker</span>
           <button className="ml-auto lg:hidden" onClick={() => setSidebarOpen(false)}>
             <X className="h-5 w-5 text-muted-foreground" />
@@ -81,9 +79,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             <Menu className="h-5 w-5" />
           </button>
           <div className="flex items-center gap-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md gradient-primary">
-              <Zap className="h-4 w-4 text-primary-foreground" />
-            </div>
+            <img src="/habit-tracker-logo.svg" alt="Habit Tracker" className="h-7 w-7" />
             <span className="font-semibold text-sm">Habit Tracker</span>
           </div>
         </header>
