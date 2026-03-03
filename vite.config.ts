@@ -5,7 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "./" : "/",
+  // Use the repository name as base in production so GitHub Pages serves assets correctly
+  base: mode === "production" ? "/habit-flow/" : "/",
   server: {
     host: "::",
     port: 8080,
